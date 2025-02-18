@@ -1,0 +1,117 @@
+.card {
+  --card-size: 23em;
+  --padding: var(--space-xl);
+  max-width: var(--card-size);
+  width: 100%;
+  padding: var(--padding);
+  background: var(--white);
+  box-shadow: 0 0 4px 0px var(--grey-2);
+  border-radius: 0.5em;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  /* TODO: discuss sizing standards with designer (s seems too small, m too large) */
+  gap: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
+.card-header svg {
+  fill: var(--grey-3);
+  width: 20px;
+}
+
+.card-header h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  align-items: center;
+}
+
+.opening-hours-list li {
+  /* TODO: discuss spacing standards with designer */
+  --padding: 0.375em;
+  display: grid;
+  /* TODO: discuss how to handle overflow with designer  */
+  grid-template-columns: [days] auto [hours] auto;
+  border-bottom: 1px solid var(--grey-2);
+  padding: var(--padding) 0;
+}
+
+.opening-hours-list li:first-of-type {
+  border-top: 1px solid var(--black);
+}
+
+.opening-hours-list .day {
+  font-weight: 500;
+  grid-column: days;
+  text-transform: capitalize;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.opening-hours-list .times,
+.opening-hours-list .exceptional-day,
+.closed-day {
+  grid-column: hours;
+  margin-left: auto;
+  text-align: right;
+}
+
+.opening-hours-list time {
+  display: block;
+  text-align: right;
+}
+
+.opening-hours-list .times> :nth-child(n + 2) {
+  margin-top: var(--space-xs);
+}
+
+.opening-hours-list .closed-day {
+  color: var(--grey-3);
+}
+
+.opening-hours-list .today {
+  --label-color: var(--green);
+  font-weight: 600;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-font-s);
+  color: var(--label-color);
+  margin-left: var(--space-m);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 24em) {
+  .card {
+    width: auto;
+    --padding: var(--space-l);
+  }
+
+  .opening-hours-list .today {
+    font-size: calc(var(--font-size-s) * 0.8);
+    margin-left: var(--space-m);
+  }
+}
+
+.exceptional-hours {
+  --label-color: var(--grey-3);
+  font-size: var(--font-size-s);
+  color: var(--label-color);
+}
+
+.animated {
+  animation: 1s fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(2%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

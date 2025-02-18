@@ -1,0 +1,47 @@
+{
+  "hours": {
+    "monday": [],
+    "friday": [
+      {
+        "type": "open",
+        "value": 48000
+      }
+    ],
+    "saturday": [
+      {
+        "type": "close",
+        "value": 3600
+      }
+    ],
+    "sunday": [
+      {
+        "type": "open",
+        "value": 28800
+      },
+      {
+        "type": "close",
+        "value": 39600
+      }
+    ]
+  },
+  "changes": [
+    {
+      "day": "monday",
+      "kind": "replace"
+    },
+    {
+      "day": "friday",
+      "kind": "merge"
+    },
+    {
+      "day": "sunday",
+      "kind": "replace"
+    }
+  ],
+  "holidays": [
+    {
+      "day": "monday",
+      "name": "New Year's Day"
+    }
+  ]
+}

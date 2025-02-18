@@ -1,0 +1,23 @@
+:root {
+  --font-size-s: 0.75rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  --font-family: 'Roboto', 'Roboto-Fallback', 'Franklin Gothic Medium', Tahoma, sans-serif;
+
+  --black: hsl(228, 7%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --green: hsl(93, 98%, 40%);
+  --grey-1: hsl(0, 0%, 97%);
+  --grey-2: hsl(0, 0%, 93%);
+  --grey-3: hsl(220, 2%, 64%);
+
+  --base-text-color: var(--black);
+
+  --space-xs: 0.25em;
+  --space-s: 0.5em;
+  --space-m: 1em;
+  --space-l: 1.5em;
+  --space-xl: 2em;
+}

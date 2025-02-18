@@ -1,0 +1,10 @@
+.spinner {
+  transform-origin: center;
+  animation: loading-spin .75s infinite linear
+}
+
+@keyframes loading-spin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
